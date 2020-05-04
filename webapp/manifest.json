@@ -1,0 +1,116 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.shunyu.lqp.fiori-test-boeing",
+		"type": "application",
+		"i18n": "i18n/i18n_en.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "com.shunyu.lqp.fiori-test-boeing.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.shunyu.lqp.fiori-test-boeing.i18n.i18n"
+				}
+			},
+			"checkList": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "CheckList.json"
+			}
+		},
+
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.shunyu.lqp.fiori-test-boeing.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+				"name": "main",
+				"pattern": "",
+				"target": "main"
+			}, {
+				"pattern": "reservationdetail",
+				"name": "reservationDetail",
+				"target": "reservationDetail"
+			}, {
+				"pattern": "startTrip",
+				"name": "startTrip",
+				"target": "startTrip"
+			}],
+			"targets": {
+				"main": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "Main",
+					"viewName": "Main"
+				},
+				"reservationDetail": {
+					"viewName": "ReservationDetail",
+					"viewId": "ReservationDetail",
+					"viewLevel": 2
+				},
+				"startTrip": {
+					"viewType": "XML",
+					"viewName": "StartTrip",
+					"viewId": "StartTrip",
+					"viewLevel": 2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"CheckList": [{
+		"title": "Mirrors/Cameras",
+		"checkState": false
+	}, {
+		"title": "Brake Lights/Headlights",
+		"checkState": false
+	}, {
+		"title": "Gauges/ Radio/Horn",
+		"checkState": false
+	}, {
+		"title": "Hydraulic/Limit Switch",
+		"checkState": false
+	}, {
+		"title": "Steering/Braking",
+		"checkState": false
+	}, {
+		"title": "Hoist-Lower/Tilt Controls",
+		"checkState": false
+	}, {
+		"title": "Seat Belt",
+		"checkState": false
+	}, {
+		"title": "Back-Up Alarm",
+		"checkState": false
+	}, {
+		"title": "Back-Up Lights",
+		"checkState": false
+	}]
+}
