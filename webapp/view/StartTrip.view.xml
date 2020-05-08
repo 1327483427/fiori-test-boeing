@@ -22,7 +22,7 @@
 					<!--ObjectStatus text="T0000001"/ -->
 				</statuses>
 			</ObjectHeader>
-			<List headerText="Pre-inspection checklist" items="{checkList>/CheckList}">
+			<List headerText="{i18n>PRE-INSPECTION_CHECKLIST}" items="{checkList>/CheckList}">
 				<InputListItem label="{checkList>title}">
 					<Switch state="{checkList>checkState}" type="AcceptReject" change="changeSwitch"/>
 				</InputListItem>
